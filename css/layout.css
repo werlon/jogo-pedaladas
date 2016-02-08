@@ -1,0 +1,37 @@
+canvas {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left:0px;
+    right: 0px;
+    margin: auto;
+}
+#meio{
+    height: 600px;
+}
+#alto, #baixo, #rodape, #meio{
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left:0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+    width: 600px;
+}
+#alto {
+    height: 150px;
+}
+@media (max-width: 700px){
+    #baixo,#rodape{
+        width: 300px;
+    }
+    #alto{display: none;}
+    canvas{
+        width: 300px;
+        height: 300px;
+    }
+}
+
