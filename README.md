@@ -1,12 +1,11 @@
 # Jogo Pedaladas
 
 Meu primeiro jogo html/javascript
+- Resolvi aprender como criar um jogo javascript bem simples.
+  O resultado inicial está aqui. Um jogo com um unico comando,
+  que se resume em clicar para que o personagem pule obstáculos.
 
-## Usos
-
-Resolvi aprender como criar um jogo javascript bem simples.
-O resultado inicial está aqui. Um jogo com um unico comando,
-que se resume em clicar para que o personagem pule obstáculos.
+## Ideia do Jogo
 
 * No nosso caso a personagem principal, em sua bicicleta pedala sem parar.
 * Para continuar pedalando e ganhando pontos tem que pular os Juizes do STF.
