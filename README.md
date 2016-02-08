@@ -2,7 +2,7 @@
 
 Meu primeiro jogo html/javascript
 - Resolvi aprender como criar um jogo javascript bem simples.
-  O resultado inicial está aqui. Um jogo com um unico comando,
+  O resultado inicial está aqui. Um jogo com um único comando,
   que se resume em clicar para que o personagem pule obstáculos.
 
 ## Ideia do Jogo
