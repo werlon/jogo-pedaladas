@@ -26,3 +26,5 @@ Sempre que puder vou atualizar a conta para permanecer o máximo de tempo ativa.
 [Jogo Exemplo](http://antenas.host22.com/pedaladas/)
 
 - Aceito ideias e ajuda para melhorar e aprender mais.
+
+- Adicionei um som de fundo e dois sons para colisão, porém percebi que os dispositivos móveis não funcionou os sons da colisão

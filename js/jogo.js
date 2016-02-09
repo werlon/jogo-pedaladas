@@ -87,11 +87,13 @@ var bloco = {
         contexto.restore();
     }
 };
+
+var music = document.getElementById("music");
+var tocado = document.getElementById("tocado");
+var perdido = document.getElementById("perdido");
+
 var obstaculos = {
     _obs: [],
-    cores: ['#22f', '#f11', '#080', '#000', '#777'],
-    nomes: ['TCU','POVO','BNDES','BRASIL','AGU'],
-    stf: [30,84,138,192,246],
     posicao:0,
     tempoInsere: 0,
     insere: function () {
@@ -101,8 +103,6 @@ var obstaculos = {
             largura: 54,
             altura: 90,
             ponto: 5 * Math.random(),
-            cor: this.cores[this.posicao],
-            texto:this.nomes[this.posicao],
             blocoPosicao: this.posicao
         });
         this.tempoInsere = 40 + Math.floor(70 * Math.random());
@@ -124,7 +124,15 @@ var obstaculos = {
                 setTimeout(function(){
                     bloco.colidindo = false;
                 },700);
-                if(bloco.vidas >= 1){bloco.vidas--;}else{estadoAtual = estados.perdeu;}
+
+                if(bloco.vidas >= 1){
+                    bloco.vidas--;
+                    tocado.play();
+                }else{
+                    estadoAtual = estados.perdeu;
+                    perdido.play();
+                    paraMusica();
+                }
             }else if(obs.x==0){bloco.score++;}else
             if(obs.x <= -obs.largura){
                 this._obs.splice(i, 1);tam--;i--;
@@ -141,10 +149,20 @@ var obstaculos = {
         }
     }
 };
+
+function tocaMusica() {
+    music.play();
+}
+
+function paraMusica() {
+    music.pause();
+}
+
 function clique(event){
     if(estadoAtual==estados.jogando){
         bloco.pula();
     }else if(estadoAtual == estados.jogar){
+        tocaMusica();
         estadoAtual = estados.jogando;
     }else if(estadoAtual == estados.perdeu && bloco.y >= 2 * ALTURA){
         estadoAtual = estados.jogar;
